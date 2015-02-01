@@ -1,0 +1,22 @@
+.btn {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+#itemId {
+  font-size: 9px;
+}
+
+.navlist li{
+  display: inline;
+  list-style-type: none; 
+  padding: 15px;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+a:hover, a:visited, a:link, a:active
+{
+    text-decoration: none;
+    color: black;
+}

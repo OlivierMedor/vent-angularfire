@@ -1,0 +1,32 @@
+
+
+
+<h1>Items</h1>
+<form>
+<input class="form-control" ng-model="newItemText" placeholder="Enter new item">
+<button class="btn btn-success" ng-click="addNewItem()">Push new item</button>
+</form>
+
+<div class="data">
+  <table class="table">
+    <tr>
+      <th>ObjectID</th>
+      <th>Item Name</th>
+      <th>Qty on Hand</th>
+      <th>Created At</th>
+      <th>Modified At</th>
+      <th>Add one to Qty</th>
+      <th>Delete Item</th>
+    </tr>
+    <tr ng-repeat="item in items | filter: filterText">
+      <td id="itemId">{{ item.$id }}</td>
+      <td>{{ item.itemName }}</td>
+      <td>{{ item.qtyOnHand }}</td>
+      <td>{{ item.createdAt | date:'medium'}}</td>
+      <td>{{ item.modifiedAt | date:'medium' }}</td>
+      <td><button class="btn btn-primary" ng-click="addOneToQty(item.$id)">Add One</button></td>
+      <td><button class="btn btn-danger" ng-click="removeItem(item.$id)">Delete</button></td>
+    </tr>
+  </table>
+</div>
+
