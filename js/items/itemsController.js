@@ -1,8 +1,8 @@
-var app = angular.module('myapp');
+var app = angular.module('vent');
 
 app.controller('itemsController', function($scope, $firebase, itemsService){
   
-  var ref = new Firebase("https://myapp.firebaseio.com/items");
+  var ref = new Firebase("https://vent.firebaseio.com/items");
   var sync = $firebase(ref);
   var itemsArray = sync.$asArray();
   $scope.items = itemsArray;
